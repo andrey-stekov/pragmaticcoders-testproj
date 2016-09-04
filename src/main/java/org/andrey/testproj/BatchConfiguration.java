@@ -99,7 +99,7 @@ public class BatchConfiguration {;
                   " select "
                 + "   sum(e.price * e.quantity * c.ratio), "
                 + "   avg(e.price * e.quantity * c.ratio), "
-                + "   ((select count(*) from entity) - :topPricedCount) "
+                + "   ((select count(*) from entity where matching_id = :matchingId) - :topPricedCount) "
                 + " from entity e"
                 + " join currency c on e.currency = c.currency"
                 + " where e.id in ("

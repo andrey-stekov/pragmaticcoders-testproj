@@ -9,7 +9,7 @@ import java.io.Writer;
  * Created by andrey on 01.09.2016.
  */
 public class TopProductHeaderWriter implements FlatFileHeaderCallback {
-    public static final String HEADER = "matching_id,total_price,avg_price,currency,ignored_products_count";
+    public static final String HEADER = "matching_id,total_price,avg_price,ignored_products_count";
 
     @Override
     public void writeHeader(Writer writer) throws IOException {
